@@ -3,24 +3,27 @@ import pygame
 from constants import *
 from helpers import screen
 
-
 class Post:
-    """
-    A class used to represent post on Nitzagram
-    """
-    def __init__(self): #TODO: add parameters
-        #TODO: write me!
-        pass
+
+    def __init__(self, username, location, description, like_counter, comments):
+        self.username = username
+        self.location = location
+        self.description = description
+        self.like_counter = like_counter
+        self.comments = comments
+
+        # הוספת לייק
+    def add_like(self):
+        self.like_counter += 1
+
+        # הוספת תגובה
+    def add_comment(self, text):
+        self.comments.append(text)
+
 
     def display(self):
-        """
-        Display the Post image/Text, description, location, likes and comments
-        on screen
-
-        :return: None
-        """
-        # TODO: write me!
-        pass
+        print(self.username)
+        print()
 
 
     def display_comments(self):
